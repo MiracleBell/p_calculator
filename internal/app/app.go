@@ -1,5 +1,7 @@
 package app
 
-func Application() {
+import . "../routes"
 
+func Application() {
+	MainRouter()
 }
