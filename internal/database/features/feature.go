@@ -1,7 +1,7 @@
 package features
 
 import (
-	. "../"
+	. ".."
 	. "../../models/features"
 	"log"
 )
