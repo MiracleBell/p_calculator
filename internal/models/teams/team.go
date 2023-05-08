@@ -1,11 +1,9 @@
 package teams
 
-import . "../projects"
-
-type Position struct {
-	Name        string
-	DefaultRate float64
-}
+import (
+	. "../positions"
+	. "../projects"
+)
 
 type TeamMember struct {
 	ID                  uint64

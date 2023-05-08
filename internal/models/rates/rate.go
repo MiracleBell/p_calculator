@@ -1,8 +1,8 @@
 package rates
 
 import (
+	. "../positions"
 	. "../projects"
-	. "../teams"
 )
 
 type Rate struct {
