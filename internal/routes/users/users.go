@@ -1,10 +1,13 @@
 package users
 
-import "net/http"
+import (
+	handler "../../handlers/users"
+	"net/http"
+)
 
 func RegisterNewUser(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
-		//TODO: do someth...
+		handler.PostUser(w, r)
 	}
 	http.Error(w, "Invalid request method", 405)
 }

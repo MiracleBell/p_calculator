@@ -28,4 +28,10 @@ func MainRouter() {
 	http.HandleFunc("/projects/{projectId}/rates", RatesRouter)
 
 	http.HandleFunc("/projects/{projectId}/team-members", TeamRouter)
+
+	// запускаем сервер
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err)
+	}
 }

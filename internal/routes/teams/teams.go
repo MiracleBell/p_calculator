@@ -1,6 +1,7 @@
 package teams
 
 import (
+	handler "../../handlers/teams"
 	"net/http"
 )
 
@@ -16,9 +17,9 @@ func TeamRouter(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetProjectTeam(w http.ResponseWriter, r *http.Request) {
-	//TODO: do someth
+	handler.GetMilestone(w, r)
 }
 
 func PutProjectTeam(w http.ResponseWriter, r *http.Request) {
-
+	handler.PutMilestone(w, r)
 }

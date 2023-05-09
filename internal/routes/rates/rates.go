@@ -1,6 +1,7 @@
 package rates
 
 import (
+	handler "../../handlers/rates"
 	"net/http"
 )
 
@@ -16,9 +17,9 @@ func RatesRouter(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetProjectRates(w http.ResponseWriter, r *http.Request) {
-	//TODO: do someth
+	handler.GetRates(w, r)
 }
 
 func PutProjectRates(w http.ResponseWriter, r *http.Request) {
-
+	handler.PutRate(w, r)
 }

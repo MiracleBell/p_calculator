@@ -1,6 +1,7 @@
 package projects
 
 import (
+	handler "../../handlers/projects"
 	"net/http"
 )
 
@@ -16,9 +17,9 @@ func ProjectRouter(w http.ResponseWriter, r *http.Request) {
 }
 
 func AddNewProject(w http.ResponseWriter, r *http.Request) {
-	//TODO: do someth
+	handler.PostMilestone(w, r)
 }
 
 func GetProjectList(w http.ResponseWriter, r *http.Request) {
-
+	handler.GetMilestone(w, r)
 }

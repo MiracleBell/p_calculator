@@ -1,10 +1,9 @@
 package milestones
 
 import (
-	. "../../utils"
+	handler "../../handlers/milestones"
 	"net/http"
 )
-
 
 func MilestoneRouter(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
@@ -29,29 +28,17 @@ func MilestoneRouterWithId(w http.ResponseWriter, r *http.Request) {
 }
 
 func AddNewMilestone(w http.ResponseWriter, r *http.Request) {
-	if IsPost(r) {
-		//TODO: do someth
-	}
-	http.Error(w, "Invalid request method", 405)
+	handler.PostMilestone(w, r)
 }
 
 func GetProjectMilestones(w http.ResponseWriter, r *http.Request) {
-	if IsGet(r) {
-
-	}
-	http.Error(w, "Invalid request method", 405)
+	handler.GetMilestone(w, r)
 }
 
 func PutMilestone(w http.ResponseWriter, r *http.Request) {
-	if IsPut(r) {
-
-	}
-	http.Error(w, "Invalid request method", 405)
+	handler.PutMilestone(w, r)
 }
 
 func DeleteMilestone(w http.ResponseWriter, r *http.Request) {
-	if IsDelete(r) {
-
-	}
-	http.Error(w, "Invalid request method", 405)
+	handler.DeleteMilestone(w, r)
 }
